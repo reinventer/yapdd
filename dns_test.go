@@ -166,7 +166,7 @@ func TestClient_DNSAdd(t *testing.T) {
 			}
 
 			p := []Option{
-				WithHttpClient(httpClient),
+				WithHTTPClient(httpClient),
 			}
 
 			if tc.asRegistrar {
@@ -321,7 +321,7 @@ func TestClient_DNSList(t *testing.T) {
 				Transport: transport,
 			}
 
-			cli := New("token", WithHttpClient(httpClient))
+			cli := New("token", WithHTTPClient(httpClient))
 
 			response, err := cli.DNSList(
 				context.Background(),
@@ -470,7 +470,7 @@ func TestClient_DNSEdit(t *testing.T) {
 				Transport: transport,
 			}
 
-			cli := New("token", WithHttpClient(httpClient))
+			cli := New("token", WithHTTPClient(httpClient))
 
 			response, err := cli.DNSEdit(
 				context.Background(),
@@ -580,7 +580,7 @@ func TestClient_DNSDel(t *testing.T) {
 				Transport: transport,
 			}
 
-			cli := New("token", WithHttpClient(httpClient))
+			cli := New("token", WithHTTPClient(httpClient))
 
 			response, err := cli.DNSDel(
 				context.Background(),

@@ -24,3 +24,10 @@ rec, err := cli.DNSAdd(
 	yapdd.NewDNSParams().Subdomain("www").Content("domain.com"),
 )
 ```
+
+**Important note**: http.DefaultClient is used in package by default. Please replace the HTTP client if you want to use yapdd in production.
+For example:
+```go
+httpCli:=&http.Client{Timeout: time.Second}
+cli := yapdd.New("PddToken", yapdd.WithHTTPClient(httpCli))
+```

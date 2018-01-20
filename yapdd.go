@@ -49,7 +49,7 @@ func AsRegistrar(oauthToken string) Option {
 	}
 }
 
-func WithHttpClient(httpCli *http.Client) Option {
+func WithHTTPClient(httpCli *http.Client) Option {
 	return func(cli *Client) {
 		cli.httpCli = httpCli
 	}
