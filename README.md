@@ -1,5 +1,7 @@
 # Yapdd
 
+[![Build Status](https://travis-ci.org/reinventer/yapdd.svg?branch=master)](https://travis-ci.org/reinventer/yapdd)
+
 Yapdd is a golang package that provides a client implementation of [Yandex.Mail for Domain API](https://tech.yandex.com/domain/doc/about-docpage/).
 
 Work still in progress.
